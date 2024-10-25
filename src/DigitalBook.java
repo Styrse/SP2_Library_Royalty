@@ -11,10 +11,6 @@ private int use;
         this.use = use;
     }
 
-    @Override
-    public double calculateRoyalty() {
-        return 0;
-    }
 
     @Override
     public double getPoints() {
@@ -23,6 +19,11 @@ private int use;
 
     @Override
     public double getPages() {
+        return 0;
+    }
+
+    @Override
+    public float calculatePoints() {
         return 0;
     }
 }

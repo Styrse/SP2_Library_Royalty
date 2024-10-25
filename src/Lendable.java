@@ -1,6 +1,8 @@
 public interface Lendable {
 
-    public double calculateRoyalty();
+    public float calculatePoints();
+
+    public float calculateRoyalty();
 
     public double getPages();
 }

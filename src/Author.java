@@ -17,7 +17,19 @@ public class Author {
         titles.add(title);
     }
 
+    public String getName() {
+        return name;
+    }
+
     public ArrayList<Title> getTitles() {
         return titles;
+    }
+
+    public float calculateTotalPay(){
+        float totalPay = 0;
+        for (Title t : titles){
+            totalPay += t.calculateRoyalty();
+        }
+        return totalPay;
     }
 }

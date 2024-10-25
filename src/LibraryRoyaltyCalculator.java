@@ -5,5 +5,6 @@ public class LibraryRoyaltyCalculator {
 
         PrintedBook book1 = new PrintedBook("The Bell Jar", "SKØN", 100, 288);
 
+        author1.addTitle(book1);
     }
 }
