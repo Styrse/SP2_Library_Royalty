@@ -1,4 +1,4 @@
-public class AudioBook extends PhysicalBook implements IAudioBook{
+public class AudioBook extends PhysicalBook{
 
     private int durationMinutes;
 
@@ -8,22 +8,7 @@ public class AudioBook extends PhysicalBook implements IAudioBook{
     }
 
     @Override
-    public int getDuration() {
-        return 0;
-    }
-
-    @Override
-    public float getPoints() {
-        return 0;
-    }
-
-    @Override
-    public float getPages() {
-        return 0;
-    }
-
-    @Override
-    public float calculatePoints() {
-        return 0;
+    protected double calculatePoints() {
+        return (durationMinutes* 0.5) * calculateLiteraturePoints(this) * copies;
     }
 }

@@ -25,7 +25,7 @@ public class Author {
         return titles;
     }
 
-    public float calculateTotalPay(){
+    public double calculateTotalPay(){
         float totalPay = 0;
         for (Title t : titles){
             totalPay += t.calculateRoyalty();

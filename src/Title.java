@@ -1,21 +1,53 @@
-public abstract class Title extends Author implements Lendable{
+public abstract class Title extends Author{
     private String title;
     private int literaturePoint;
     private String literatureType;
-    private final float rate = 0.067574F;
+    private final double rate = 0.067574;
 
     public Title(String title, String literatureType) {
         this.title = title;
         this.literatureType = literatureType;
     }
 
-    public float calculateRoyalty(){
+    public double calculateRoyalty(){
         return calculatePoints() * rate;
     }
 
+    protected String getLiteratureType(){
+        return literatureType;
+    }
 
+    protected abstract double calculatePoints();
 
-    public abstract float getPoints();
-
-    public abstract float getPages();
+    protected double calculateLiteraturePoints(Title title){
+        float points = 0;
+        switch (getLiteratureType()){
+            case "BI":
+            case "TE":
+                points = 3;
+                break;
+            case "LYRIK":
+            case "NO":
+                points = 6;
+                break;
+            case "SKØN":
+                points = 1.7F;
+                break;
+            case "OVERS":
+            case "ORDBO":
+                points = 1F/3F;
+                break;
+            case "OVLYR":
+                points = 2;
+                break;
+            case "SAMLI":
+            case "ALM":
+                points = 1;
+                break;
+        }
+        if (title instanceof IAudioBook){
+            points *= 0.5;
+        }
+        return points;
+    }
 }

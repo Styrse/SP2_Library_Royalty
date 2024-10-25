@@ -8,17 +8,12 @@ public class PrintedBook extends PhysicalBook{
     }
 
     @Override
-    public float getPoints() {
-        return 0;
+    protected double calculatePoints() {
+        return pages * calculateLiteraturePoints(this) * copies;
     }
 
     @Override
-    public float getPages() {
-        return 0;
-    }
-
-    @Override
-    public float calculatePoints() {
-        return 0;
+    protected double calculateLiteraturePoints(Title title) {
+        return super.calculateLiteraturePoints(this);
     }
 }

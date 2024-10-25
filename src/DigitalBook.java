@@ -11,19 +11,8 @@ private int use;
         this.use = use;
     }
 
-
     @Override
-    public float getPoints() {
-        return 0;
-    }
-
-    @Override
-    public float getPages() {
-        return 0;
-    }
-
-    @Override
-    public float calculatePoints() {
+    protected float calculatePoints() {
         return 0;
     }
 }
