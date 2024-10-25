@@ -4,7 +4,7 @@ class Author{
 - String name;
 - ArrayList<Title> titles
 
-+ Author(String name)
++ Author(public Author(String name))
 + void addTitle(Title)
 + ArrayList<Title> getTitles()
 }
@@ -17,21 +17,21 @@ interface Lendable{
 abstract Title implements Lendable{
 - String title
 - int litteraturePoint
-- double rate
 - String literatureType
+- double rate
 + Title(public Title(String title, String literatureType))
 + double calculateRoyalty()
-# double getPoints()
-# double getPages()
++ double getPoints()
++ double getPages()
 }
 
 Author *-- Title
 
 abstract PhysicalBook extends Title{
-+ int copies
+- int copies
 + PhysicalBook(public PhysicalBook(String title, String literatureType, int copies))
 + double getPoints()
-# double getPages()
++ double getPages()
 }
 
 interface IAudioBook{
@@ -41,13 +41,13 @@ interface IAudioBook{
 class PrintedBook extends PhysicalBook{
 - int pages
 + PhysicalBook(public PhysicalBook(String title, String literatureType, int copies, int pages))
-# double getPages()
++ double getPages()
 }
 
 class AudioBook extends PhysicalBook implements IAudioBook{
 - int durationMinutes
 + AudioBook(public AudioBook(String title, String literatureType, int copies, int durationMinutes))
-# double getPages()
++ double getPages()
 + int getDuration()
 }
 
@@ -56,14 +56,14 @@ abstract DigitalBook extends Title{
 - int reach
 - int use
 + DigitalBook(public DigitalBook(String title, String literatureType, int availability, int reach, int use))
-- int getUsePoints()
++ int getUsePoints()
 + double getPoints()
 }
 
 class EAudioBook extends DigitalBook implements IAudioBook{
 - int durationMinutes
 + EAudioBook(public EAudioBook(String title, String literatureType, int availability, int reach, int use, int durationMinutes))
-# double getPages()
++ double getPages()
 + int getDuration()
 }
 
@@ -71,7 +71,7 @@ class EBook extends DigitalBook{
 - int characters
 - boolean illustrated
 + EBook(public EBook(String title, String literatureType, int availability, int reach, int use, int characters, boolean illustrated))
-# double getPages()
++ double getPages()
 }
 
 @enduml
