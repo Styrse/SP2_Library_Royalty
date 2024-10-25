@@ -7,7 +7,7 @@ public abstract class PhysicalBook extends Title {
         this.copies = copies;
     }
 
-    public abstract double getPoints();
+    public abstract float getPoints();
 
-    public abstract double getPages();
+    public abstract float getPages();
 }

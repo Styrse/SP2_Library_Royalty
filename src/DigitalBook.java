@@ -13,12 +13,12 @@ private int use;
 
 
     @Override
-    public double getPoints() {
+    public float getPoints() {
         return 0;
     }
 
     @Override
-    public double getPages() {
+    public float getPages() {
         return 0;
     }
 

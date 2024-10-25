@@ -8,7 +8,7 @@ public class EAudioBook extends DigitalBook implements IAudioBook{
     }
 
     @Override
-    public double getPages() {
+    public float getPages() {
         return super.getPages();
     }
 

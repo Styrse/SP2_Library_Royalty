@@ -15,7 +15,7 @@ public abstract class Title extends Author implements Lendable{
 
 
 
-    public abstract double getPoints();
+    public abstract float getPoints();
 
-    public abstract double getPages();
+    public abstract float getPages();
 }

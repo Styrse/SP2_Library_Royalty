@@ -9,7 +9,7 @@ public class EBook extends DigitalBook{
     }
 
     @Override
-    public double getPages() {
+    public float getPages() {
         return super.getPages();
     }
 }
