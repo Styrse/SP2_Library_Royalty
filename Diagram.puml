@@ -1,0 +1,75 @@
+@startuml
+
+class Author{
+- String name;
+- ArrayList<Title> titles
+
++ Author(String name)
++ void addTitle(Title)
++ ArrayList<Title> getTitles()
+}
+
+interface Lendable{
++ double calculateRoyalty()
++ double getPages()
+}
+
+abstract Title extends Author implements Lendable{
+- String title
+- int litteraturePoint
+- double rate
+- String literatureType
++ Title(public Title(String title, String literatureType))
++ double calculateRoyalty()
+# double getPoints()
+# double getPages()
+}
+
+abstract PhysicalBook extends Title{
++ int copies
++ PhysicalBook(public PhysicalBook(String title, String literatureType, int copies))
++ double getPoints()
+# double getPages()
+}
+
+interface IAudioBook{
++ int getDuration()
+}
+
+class PrintedBook extends PhysicalBook{
+- int pages
++ PhysicalBook(public PhysicalBook(String title, String literatureType, int copies, int pages))
+# double getPages()
+}
+
+class AudioBook extends PhysicalBook implements IAudioBook{
+- int durationMinutes
++ AudioBook(public AudioBook(String title, String literatureType, int copies, int durationMinutes))
+# double getPages()
++ int getDuration()
+}
+
+abstract DigitalBook extends Title{
+- int availability
+- int reach
+- int use
++ DigitalBook(public DigitalBook(String title, String literatureType, int availability, int reach, int use))
+- int getUsePoints()
++ double getPoints()
+}
+
+class EAudioBook extends DigitalBook implements IAudioBook{
+- int durationMinutes
++ EAudioBook(public EAudioBook(String title, String literatureType, int availability, int reach, int use, int durationMinutes))
+# double getPages()
++ int getDuration()
+}
+
+class EBook extends DigitalBook{
+- int characters
+- boolean illustrated
++ EBook(public EBook(String title, String literatureType, int availability, int reach, int use, int characters, boolean illustrated))
+# double getPages()
+}
+
+@enduml
