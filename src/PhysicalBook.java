@@ -2,8 +2,8 @@ public abstract class PhysicalBook extends Title {
 
     private int copies;
 
-    public PhysicalBook(String name, String title, int literaturePoint, String literatureType, int copies) {
-        super(name, title, literaturePoint, literatureType);
+    public PhysicalBook(String title, String literatureType, int copies) {
+        super(title, literatureType);
         this.copies = copies;
     }
 

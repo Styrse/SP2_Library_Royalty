@@ -3,5 +3,7 @@ public class LibraryRoyaltyCalculator {
 
         Author author1 = new Author("Sylvia Plath");
 
+        PrintedBook book1 = new PrintedBook("The Bell Jar", "SKØN", 100, 288);
+
     }
 }

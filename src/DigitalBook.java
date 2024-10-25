@@ -4,8 +4,8 @@ private int availability;
 private int reach;
 private int use;
 
-    public DigitalBook(String name, String title, int literaturePoint, String literatureType, int availability, int reach, int use) {
-        super(name, title, literaturePoint, literatureType);
+    public DigitalBook(String title, String literatureType, int availability, int reach, int use) {
+        super(title, literatureType);
         this.availability = availability;
         this.reach = reach;
         this.use = use;

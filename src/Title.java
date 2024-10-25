@@ -4,10 +4,8 @@ public abstract class Title extends Author implements Lendable{
     private String literatureType;
     private final double rate = 0.067574;
 
-    public Title(String name, String title, int literaturePoint, String literatureType) {
-        super(name);
+    public Title(String title, String literatureType) {
         this.title = title;
-        this.literaturePoint = literaturePoint;
         this.literatureType = literatureType;
     }
 

@@ -10,6 +10,9 @@ public class Author {
         titles = new ArrayList<>();
     }
 
+    public Author() {
+    }
+
     public void addTitle(Title title){
         titles.add(title);
     }
