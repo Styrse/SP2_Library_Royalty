@@ -12,7 +12,7 @@ private int use;
     }
 
     @Override
-    protected float calculatePoints() {
+    protected double calculatePoints() {
         return 0;
     }
 }
