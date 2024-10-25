@@ -13,6 +13,10 @@ public abstract class Title extends Author{
         return calculatePoints() * rate;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     protected abstract double calculatePoints();
 
     protected double calculateLiteraturePoints(Title title){
