@@ -13,10 +13,14 @@ public abstract class Title extends Author{
         return calculatePoints() * rate;
     }
 
+    public String getLiteratureType() {
+        return literatureType;
+    }
+
     protected abstract double calculatePoints();
 
     protected double calculateLiteraturePoints(Title title){
-        float points = 0;
+        float points = 1;
         switch (literatureType){
             case "BI":
             case "TE":
@@ -41,7 +45,7 @@ public abstract class Title extends Author{
                 points = 1;
                 break;
         }
-        if (title instanceof IAudioBook){
+        if (title instanceof AudioBook){
             points *= 0.5;
         }
         return points;

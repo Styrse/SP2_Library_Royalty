@@ -14,7 +14,8 @@ public class LibraryRoyaltyCalculator {
         PrintedBook book3 = new PrintedBook("The sun Also Rises", "SKØN", 394, 255);
         PrintedBook book4 = new PrintedBook("A Room of one´s own", "SKØN", 172, 195);
         AudioBook audioBook1 = new AudioBook("The Old Man and the See", "SKØN", 310, 148);
-        AudioBook audioBook2 = new AudioBook("A Movable Feast", "SKØN", 175, 246);
+        AudioBook audioBook2 = new AudioBook("A Movable Feast", "SKØN", 10, 400);
+        EBook eBook1 = new EBook("A Farewell to Arms", "FAG", 97, 50, 205, 360000, false, true);
 
 //        author1.addTitle(book1);
 //        author1.addTitle(book2);
@@ -22,6 +23,7 @@ public class LibraryRoyaltyCalculator {
 //        author3.addTitle(book4);
 //        author2.addTitle(audioBook1);
         author2.addTitle(audioBook2);
+        //author2.addTitle(eBook1);
 
         //Formatting to two decimals
         //System.out.println("Author name: " + author1.getName() + "\nYearly payout: " + String.format("%.2f", author1.calculateTotalPay()) + " DKK");
