@@ -13,12 +13,12 @@ public class Author {
     public Author() {
     }
 
-    public void addTitle(Title title){
-        titles.add(title);
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void addTitle(Title title){
+        titles.add(title);
     }
 
     public ArrayList<Title> getTitles() {

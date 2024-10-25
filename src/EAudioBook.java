@@ -10,7 +10,5 @@ public class EAudioBook extends DigitalBook {
     @Override
     protected double calculatePoints() {
         return (durationMinutes* 0.5) * calculateLiteraturePoints(this) * ((availability*0.5) + (reach * 5) + usageFactor(use));
-        //return (durationMinutes* 0.5) * calculateLiteraturePoints(this) * copies;
-        //return pages * calculateLiteraturePoints(this) * ((availability*0.5) + (reach * 5) + usageFactor(use));
     }
 }

@@ -9,6 +9,6 @@ public class AudioBook extends PhysicalBook{
 
     @Override
     protected double calculatePoints() {
-        return (durationMinutes* 0.5) * calculateLiteraturePoints(this) * copies;
+        return (durationMinutes* 0.5) * calculateLiteraturePoints(this) * getCopies();
     }
 }
