@@ -20,7 +20,7 @@ public class LibraryRoyaltyCalculator {
         PrintedBook book5 = new PrintedBook("Test book", "TE", 40, 30);
         AudioBook audioBook3 = new AudioBook("Test audio book", "SKØN", 10, 400);
         EBook eBook2 = new EBook("Test ebook", "FAG", 97, 50, 205, 360000, false, true);
-        EAudioBook eAudioBook1 = new EAudioBook("Test eAudio book", "SKØN", 97, 50, 205, 400);
+        EAudioBook eAudioBook1 = new EAudioBook("Test eAudio book", "OVERS", 97, 50, 205, 440);
 
         author1.addTitle(book1);
         author1.addTitle(book2);
@@ -29,9 +29,9 @@ public class LibraryRoyaltyCalculator {
         author2.addTitle(audioBook1);
         author2.addTitle(audioBook2);
         author2.addTitle(eBook1);
-//        author4.addTitle(book5);
-//        author4.addTitle(audioBook3);
-//        author4.addTitle(eBook2);
+        author4.addTitle(book5);
+        author4.addTitle(audioBook3);
+        author4.addTitle(eBook2);
         author4.addTitle(eAudioBook1);
 
         //Formatting to two decimals
@@ -44,6 +44,6 @@ public class LibraryRoyaltyCalculator {
         //System.out.println("Author name: " + author2.getName() + "\nYearly payout: $" + String.format(Locale.US, "%.2f", author2.calculateTotalPay() / USD_DKK));
 
         System.out.println("Author name: " + author4.getName() + "\nYearly payout: " + String.format("%.2f", author4.calculateTotalPay()) + " DKK");
-        //System.out.println("Author name: " + author4.getName() + "\nYearly payout: $" + String.format(Locale.US, "%.2f", author4.calculateTotalPay() / USD_DKK));
+        System.out.println("Author name: " + author4.getName() + "\nYearly payout: $" + String.format(Locale.US, "%.2f", author4.calculateTotalPay() / USD_DKK));
     }
 }
