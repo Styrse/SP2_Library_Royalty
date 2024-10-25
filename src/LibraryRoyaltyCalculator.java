@@ -35,13 +35,12 @@ public class LibraryRoyaltyCalculator {
         author4.addTitle(eAudioBook1);
 
         //Formatting to two decimals
-        //System.out.println("Author name: " + author1.getName() + "\nYearly payout: " + String.format("%.2f", author1.calculateTotalPay()) + " DKK");
+        System.out.println("Author name: " + author1.getName() + "\nYearly payout: " + String.format("%.2f", author1.calculateTotalPay()) + " DKK");
         //Converted to get amount in USD
         //Using "Locale.US" to work around local setting making it show xx.xx which is wrong when working with USD
-        //System.out.println("Author name: " + author1.getName() + "\nYearly payout: $" + String.format(Locale.US, "%.2f", author1.calculateTotalPay() / USD_DKK));
+        System.out.println("Author name: " + author1.getName() + "\nYearly payout: $" + String.format(Locale.US, "%.2f", author1.calculateTotalPay() / USD_DKK));
 
-        //System.out.println("Author name: " + author2.getName() + "\nYearly payout: " + String.format("%.2f", author2.calculateTotalPay()) + " DKK");
-        //System.out.println("Author name: " + author2.getName() + "\nYearly payout: $" + String.format(Locale.US, "%.2f", author2.calculateTotalPay() / USD_DKK));
+        System.out.println("");
 
         System.out.println("Author name: " + author4.getName() + "\nYearly payout: " + String.format("%.2f", author4.calculateTotalPay()) + " DKK");
         System.out.println("Author name: " + author4.getName() + "\nYearly payout: $" + String.format(Locale.US, "%.2f", author4.calculateTotalPay() / USD_DKK));
