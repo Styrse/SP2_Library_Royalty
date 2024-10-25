@@ -14,7 +14,7 @@ interface Lendable{
 + double getPages()
 }
 
-abstract Title extends Author implements Lendable{
+abstract Title implements Lendable{
 - String title
 - int litteraturePoint
 - double rate
@@ -24,6 +24,8 @@ abstract Title extends Author implements Lendable{
 # double getPoints()
 # double getPages()
 }
+
+Author *-- Title
 
 abstract PhysicalBook extends Title{
 + int copies
